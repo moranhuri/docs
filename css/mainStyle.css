@@ -1,0 +1,554 @@
+﻿/*fonts*/
+
+@font-face {
+    font-family: 'Brillia Calligraphy';
+    src: url('../fonts/Brillia Calligraph.ttfopensanshebrew-normal-webfont.eot');
+    src: url('../fonts/Brillia Calligraph.ttfopensanshebrew-normal-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Brillia Calligraph.ttfopensanshebrew-normal-webfont.woff') format('woff'), url('../fonts/Brillia Calligraph.ttfopensanshebrew-normal-webfont.ttf') format('truetype'), url('../fonts/Brillia Calligraph.ttfopensanshebrew-normal-webfont.svg#open_sans_hebrewnormal') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: MS UI Gothic;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#landingDiv {
+    display: grid;
+    place-items: center;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.nameWeb {
+    position: absolute; /* remove box from the normal flow */
+    left: 2%;
+    top: 1%;
+    color: white;
+    justify-content: space-between
+}
+
+
+.socialNetwork ul {
+    position: absolute; /* remove box from the normal flow */
+    right: 2%;
+}
+
+    .socialNetwork ul li {
+        display: inline-grid;
+        margin: 5px;
+    }
+
+        .socialNetwork ul li img {
+            height: 24px;
+            list-style: none;
+        }
+
+        .socialNetwork ul li a {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 70px;
+            transition: .5s;
+            border-radius: 50%;
+        }
+
+            .socialNetwork ul li a:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .5s;
+                transform: scale(.9);
+                z-index: -1;
+            }
+
+            .socialNetwork ul li a:hover:before {
+                background: #171515;
+                transform: scale(1.2);
+                box-shadow: 0 0 15px #FF0E7A;
+                filter: blur(3px);
+            }
+
+            .socialNetwork ul li a:hover {
+                box-shadow: 0 0 15px #FF0E7A;
+                text-shadow: 0 0 15px #FF0E7A;
+            }
+
+            .socialNetwork ul li a:active {
+                background-color: #ffffff2b;
+            }
+
+
+.fadeIn {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+#ProductDesigner {
+    text-align: center;
+    font-size: 65pt;
+    color: white;
+    margin: 12%;
+}
+
+
+#Projects {
+    border: 2px solid #FF0E7A;
+    height: 300px;
+    padding-right: 120px;
+    padding-left: 120px;
+    text-align: center;
+    margin: 3%;
+}
+
+
+
+    #Projects h3, #allProjects h3 {
+        color: #FF0E7A;
+        font-family: Brillia Calligraphy;
+        font-size: 50pt;
+        margin-bottom: 10px;
+    }
+
+    #Projects a, .cv a {
+        font: MS UI Gothic;
+        text-decoration: none;
+        color: #FF0E7A;
+        border: 1.5px solid #FF0E7A;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        font-weight: bold;
+    }
+
+        #Projects a:hover, .cv a:hover {
+            color: white;
+        }
+
+        #Projects a:active, .cv a:active {
+            background-color: rgba(255, 14, 122, 0.5);
+        }
+
+
+
+.crossFadeBtn {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 2px black solid;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: color 0.75s ease-in-out;
+    transition: color 0.75s ease-in-out;
+    z-index: 1;
+    border-radius: 0px;
+}
+
+    .crossFadeBtn:before, .crossFadeBtn:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25%;
+        width: 150%;
+        height: 100%;
+        background: rgba(255, 14, 122, 0.5);
+        -webkit-transition: -webkit-transform 0.75s ease-in-out;
+        transition: -webkit-transform 0.75s ease-in-out;
+        transition: transform 0.75s ease-in-out;
+        transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+        z-index: -1;
+    }
+
+    .crossFadeBtn:before {
+        -webkit-transform: translate3d(100%, 0, 0) skew(20deg);
+        transform: translate3d(100%, 0, 0) skew(20deg);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+
+    .crossFadeBtn:after {
+        -webkit-transform: translate3d(-100%, 0, 0) skew(20deg);
+        transform: translate3d(-100%, 0, 0) skew(20deg);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+
+    .crossFadeBtn:hover {
+        color: #ff0e7a;
+    }
+
+        .crossFadeBtn:hover:before, .crossFadeBtn:hover:after {
+            -webkit-transform: translate3d(0, 0, 0) skew(20deg);
+            transform: translate3d(0, 0, 0) skew(20deg);
+        }
+
+#about {
+    display: grid;
+    grid-template-columns: minmax(250px,40%) 1fr;
+}
+
+.cv {
+    width: 130px;
+    position: relative;
+    left: 300px;
+}
+
+    .cv h3 {
+        font-size: 60pt;
+        margin-bottom: 0;
+    }
+
+    .cv p {
+        font-size: 20pt;
+        width: 250px;
+        margin-top: 10px;
+    }
+
+
+.aboutMe p {
+    line-height: 30pt;
+    color: white;
+    font-size: 16pt;
+}
+
+.aboutMe {
+    position: relative;
+    top: 100px;
+    width: 60%;
+    margin: 50px;
+    background: #1C1D1D;
+    padding: 30px;
+    border-radius: .4em;
+}
+
+    .aboutMe:after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top-color: #1C1D1D;
+        border-right: 0;
+        border-bottom: 0;
+        margin-top: -10px;
+        margin-left: -60px;
+    }
+
+
+.hideme {
+    opacity: 0;
+}
+
+
+.shadowEffect {
+    box-shadow: 0 19px 18px rgba(0, 0, 0, 0), 0 10px 10px rgba(0, 0, 0, 0.20);
+}
+
+#allProjects {
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+
+    #allProjects .row {
+        height: auto;
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 5% !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #FAFAFA;
+    z-index: 0;
+    height: 93%;
+}
+
+
+
+.appear {
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    margin: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14pt;
+}
+
+.column img {
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.column h4 {
+    text-align: left;
+    color: #ff0e7a;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 15px;
+}
+
+.column a {
+    text-decoration: none;
+    color: #171515;
+}
+
+    .column a:active {
+        color: #ff0e7a96;
+    }
+
+.prev1:hover .appear, .prev2:hover .appear, .prev3:hover .appear, .prev4:hover .appear {
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.prev1:hover, .prev2:hover, .prev3:hover, .prev4:hover {
+    height: 100%;
+    transition: height 0.4s linear;
+    z-index: 10;
+    margin-bottom: -30px;
+}
+
+.prev1:active, .prev2:active, .prev3:active, .prev4:active {
+    box-shadow: 0;
+}
+
+
+footer p {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 16pt;
+}
+
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+
+
+    #landingDiv {
+    }
+
+    #ProductDesigner {
+        font-size: 40pt;
+        margin: 15%;
+    }
+
+    #Projects {
+    }
+
+    .cv {
+        position: relative;
+        left: 50px;
+    }
+
+
+
+    .aboutMe {
+    }
+
+        .aboutMe:after {
+        }
+
+    #about h3 {
+    }
+
+
+    #allProjects {
+        margin-top: 100px !important;
+    }
+
+    .column {
+        height: 100%;
+    }
+
+        .column img {
+            width: 95%;
+        }
+
+
+
+    .appear {
+        opacity: 1;
+        visibility: visible;
+        font-size: 13pt;
+        margin: 15px;
+    }
+}
+
+@media only screen and (max-width:615px) {
+    .aboutMe:after {
+        top: -8%;
+        left: 35%;
+        border: 40px solid transparent;
+        border-left: 40px;
+        border-bottom-color: #1c1d1d;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+
+    #ProductDesigner {
+        font-size: 40pt;
+        margin: 20%;
+        margin-top: 30%;
+        text-align: left;
+    }
+
+    ul li a {
+        width: 30px !important;
+    }
+
+    ul li:nth-child(1) img {
+        width: 15px;
+        height: 15px;
+    }
+
+    ul li:nth-child(2) img {
+        height: 15px;
+        width: 21px;
+    }
+
+    .socialNetwork ul li {
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .socialNetwork ul {
+        margin: 0;
+        margin-right: 3%;
+    }
+
+    .nameWeb {
+        margin-top: 3%;
+        margin-left: 3%;
+        font-size: 20pt
+    }
+
+    #Projects {
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-bottom: 30px;
+    }
+
+
+    .aboutMe {
+        top: 185px;
+        right: 170px;
+        width: 150%;
+        margin: 0;
+        margin-top: 150px;
+    }
+
+        .aboutMe p {
+            font-size: 100%;
+        }
+
+        .aboutMe:after {
+            top: -12%;
+            left: 70%;
+        }
+
+    #allProjects {
+        margin-top: 200px !important;
+    }
+
+    .row {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .row {
+    }
+
+    .column {
+    }
+
+        .column h4 {
+            font-size: 100%;
+        }
+
+        .column p {
+            font-size: 80%;
+        }
+
+    footer p {
+        margin-top: 0px;
+        font-size: 12pt;
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+
+    .aboutMe {
+        top: 200px;
+        right: 200px;
+    }
+
+        .aboutMe:after {
+            left: 80%;
+        }
+}

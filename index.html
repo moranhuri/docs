@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Moran Huri - Product Designer</title>
+    <meta name="description" content="A personal website of a product designer with a personal portfolio and resume">
+    <meta name="author" content="Moran Huri">
+    <meta name="keywords" content="product designer, moran huri, web designer, portfolio, UX, UI, resume , behance , linkdin, graphic designer">  
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!--<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">-->
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--<link href="css/StyleSheet.css" rel="stylesheet" />-->
+    <!--<link href="css/skeleton.css" rel="stylesheet" />-->
+    <link href="css/mainStyle.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <div id="landingDiv" >
+          <h1 class="nameWeb fadeIn" >Moran Huri</h1>
+          <nav class="socialNetwork">
+              <ul>
+                  <li>
+                      <a href="https://www.linkedin.com/in/moran-huri-aa950a178" target="_blank"> <img src="images/linkedin.png" width="25" /></a>
+                  </li>
+                  <li>
+                      <a href="https://www.behance.net/moranhuri" target="_blank">  <img src="images/behance.png" width="40" /></a>
+                  </li>
+              </ul>
+          </nav>
+
+          <h2 id="ProductDesigner" class="fadeIn">Product Designer.</h2>
+
+          <div id="Projects" class="fadeIn" >
+              <h3>Projects</h3>
+              <a class="crossFadeBtn" href="#allProjects">Find out more</a>
+          </div>
+      </div>
+
+      
+          <div id="about"   class="hideme">
+              <div class="cv">
+                  <h3>About</h3>
+                  <p>
+                      Learn more about my resume
+                  </p>
+                  <a class="crossFadeBtn" href="MoranHuri_Resume.pdf" download>Download CV</a>
+              </div>
+              <div class="aboutMe shadowEffect">
+                  <p>
+                      Hey, I'm Moran Huri, Bachelor of Instructional
+                      Technology at Holon Institute of Technology,
+                      Israel. I design digital products with intuitive
+                      experiences and beautiful interfaces.
+                      Specializing in Low to High Fidelity Design & Prototyping.
+                      I invite you to take a look at my projects.
+                  </p>
+              </div>
+
+          </div>
+
+          <div id="allProjects" >
+              <h3 class="hideme">Projects</h3>
+
+              <div class="row" >
+                  <div class="column shadowEffect prev1">
+                      <a href="https://www.behance.net/gallery/98770435/Rock-Climber-App" target="_blank">
+
+                          <img src="images/rockClimber.png" width="400" />
+                      </a>
+                          <h4>Rock Climber</h4>
+                          <div class="appear">
+                              <p>Rock climbing application for for all levels</p>
+                          </div>
+                     
+                  </div>
+                  <div class="column shadowEffect prev2">
+                      <a href="https://www.behance.net/gallery/99466275/HuriWinery" target="_blank">
+                          <img src="images/huriWinery.png" width="400" />
+                      </a>
+                          <h4>Huri Winery</h4>
+                          <div class="appear">
+                              <p>Responsive website for boutique winery</p>
+                          </div>
+                     
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="column shadowEffect prev3">
+                      <a href="https://www.behance.net/gallery/100179577/PhyzioKid-Child-Development-Application" target="_blank">
+                          <img src="images/PhyzioKid.png" width="400" />
+                      </a>
+                          <h4>Phyziokid</h4>
+                          <div class="appear">
+                              <p>Child development application</p>
+                          </div>
+                      
+                  </div>
+                  <div class="column shadowEffect prev4">
+                      <a href="https://www.behance.net/gallery/98882829/Kololokie" target="_blank">
+                          <img src="images/Kololokie.png" width="400" />
+                      </a>
+                          <h4>Kololokie</h4>
+                          <div class="appear">
+                              <p>Handmade Moroccan cookies website</p>
+                          </div>
+                     
+
+                  </div>
+              </div>
+
+          </div>
+
+          <footer>
+              <p> © Crafted in Israel by Moran Huri</p>
+          </footer>
+
+
+
+      </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+      <script>
+          $(function () {  // $(document).ready shorthand
+              $('.monster').fadeIn('slow');
+          });
+
+          $(document).ready(function () {
+
+              /* Every time the window is scrolled ... */
+              $(window).scroll(function () {
+
+                  /* Check the location of each desired element */
+                  $('.hideme').each(function (i) {
+
+                      var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                      /* If the object is completely visible in the window, fade it it */
+                      if (bottom_of_window > bottom_of_object) {
+
+                          $(this).animate({ 'opacity': '1' }, 1000);
+
+                      }
+
+                  });
+
+              });
+
+          });
+      </script>
+</body>
+</html>
